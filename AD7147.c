@@ -5,16 +5,7 @@
 // callback to call when data is received
 const uint8_t i2cID;
 
-#ifdef OFFLINE_TEST
-struct WireMock {
-  void (*begin)();
-  void (*beginTransmission)(uint8_t);
-  void (*write)(uint8_t);
-  void (*endTransmission)();
-} Wire;
-#else
-#include <Wire.h>
-#endif
+#include "Wire.h"
 
 int writeData(uint8_t addr, uint16_t data)
 {

@@ -135,4 +135,6 @@ struct AD7147Config {
   struct Bank1Config bank1Conf;
 };
 
+int AD7147_Init(struct AD7147Config *cfg);
+
 #endif
